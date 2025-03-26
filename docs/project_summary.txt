@@ -1,0 +1,39 @@
+Project Title: Pokemon Data Pipeline with Airflow and Streamlit Dashboard
+Project Overview:
+This project focuses on building an end-to-end data pipeline that extracts, processes, and visualizes Pokémon data. The pipeline is designed to automate data collection from an API, store the data efficiently, and present it in a user-friendly dashboard. The project showcases ETL (Extract, Transform, Load) automation, Airflow scheduling, Docker containerization, and interactive data visualization.
+Role & Responsibilities:
+•	Designed & implemented an ETL pipeline to collect Pokémon data from an external API.
+•	Developed Airflow DAGs to automate the extraction and transformation process.
+•	Implemented incremental updates, ensuring that only new Pokémon data is fetched.
+•	Integrated Docker to containerize and deploy the Airflow environment.
+•	Built a Streamlit dashboard to visualize Pokémon statistics and trends.
+•	Handled data validation and error handling to ensure reliable API communication.
+
+Technologies Used:
+•	Programming Language: Python
+•	Libraries & Tools: Pandas, Requests, Streamlit, Matplotlib
+•	Orchestration: Apache Airflow
+•	Containerization: Docker
+•	Deployment: Local & Dockerized environment
+
+Challenges & Solutions:
+1.	API Rate Limits & Error Handling
+o	Problem: The API could fail intermittently due to rate limits or connectivity issues.
+o	Solution: Implemented error handling and logging to retry failed API calls and ensure data integrity.
+2.	Incremental Data Updates
+o	Problem: Fetching the full Pokémon dataset in every run was inefficient.
+o	Solution: Implemented a mechanism to track the last fetched Pokémon ID and fetch only new data, improving efficiency.
+3.	Running Airflow on a Local Machine with Limited Resources
+o	Problem: Deploying Apache Airflow on AWS Free Tier was slow due to RAM limitations.
+o	Solution: Optimized the pipeline to run efficiently on Docker locally, ensuring stable performance without cloud deployment.
+
+Impact & Outcomes:
+Fully Automated Data Pipeline → Eliminates the need for manual data extraction.
+Efficient Data Processing → Incremental updates reduce API calls and processing time.
+Scalable & Reusable Framework → The pipeline structure can be adapted for different APIs.
+Interactive Dashboard → Provides insights into Pokémon statistics with filtering and visualizations.
+Demonstrates Full-Stack Data Engineering → Covers ETL, orchestration, automation, and visualization.
+Future Enhancements:
+•	Deploying on Cloud (AWS/GCP/Railway) to make the dashboard publicly accessible.
+•	Switching from CSV to a Database for better scalability.
+•	Expanding the Dashboard to include more analytics and user interactions.
